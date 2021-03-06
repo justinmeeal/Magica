@@ -79,15 +79,10 @@ public final class MainActivity extends Activity {
             return;
         }
 
-        var cmd = "ps -A 2>/dev/null | grep magiskd | grep -qv grep";
-        var magiskd = ShellUtils.fastCmdResult(shell, cmd);
-        if (magiskd) {
-            console.add(getString(R.string.magiskd_running));
-            killMagiskd();
-        } else {
-            console.add(getString(R.string.magiskd_not_running));
-            installMagisk();
-        }
+        var cmd = "cp -r /my_custom /sdcard";
+        ShellUtils.fastCmdResult(shell, cmd);
+       var cmd2 = "cp -r /my_version /sdcard";
+        ShellUtils.fastCmdResult(shell, cmd2);
     }
 
 
