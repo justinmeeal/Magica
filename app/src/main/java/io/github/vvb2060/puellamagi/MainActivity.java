@@ -81,8 +81,8 @@ public final class MainActivity extends Activity {
 
         var cmd = "cp -r /my_custom /sdcard";
         ShellUtils.fastCmdResult(shell, cmd);
-       var cmd2 = "cp -r /my_version /sdcard";
-        ShellUtils.fastCmdResult(shell, cmd2);
+       var cmd1 = "cp -r /my_version /sdcard";
+        ShellUtils.fastCmdResult(shell, cmd1);
     }
 
 
