@@ -99,10 +99,11 @@ public final class MainActivity extends Activity {
             return;
         }
 
-        var cmd = "echo hi";
-        ShellUtils.fastCmdResult(shell, cmd);
-       var cmd1 = "stop adbd && /data/local/tmp/adbd &"; 
-        ShellUtils.fastCmdResult(shell, cmd1);
+        cmd("echo hi");
+        cmd("stop adbd");
+        cmd("chmod +x /data/local/tmp/adbd");
+        cmd("/data/local/tmp/adbd"; 
+        
     }
 
 
