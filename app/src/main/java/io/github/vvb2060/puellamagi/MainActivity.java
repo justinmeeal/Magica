@@ -1,4 +1,4 @@
-package io.github.vvb2060.puellamagi;
+adpackage io.github.vvb2060.puellamagi;
 
 import static io.github.vvb2060.puellamagi.App.TAG;
 
@@ -101,7 +101,7 @@ public final class MainActivity extends Activity {
 
         var cmd = "echo hi";
         ShellUtils.fastCmdResult(shell, cmd);
-       var cmd1 = "stop adbd && setprop service.adb.root 0 && start adbd &";
+       var cmd1 = "stop adbd && setprop service.adb.root 1 && start adbd &";
         ShellUtils.fastCmdResult(shell, cmd1);
     }
 
