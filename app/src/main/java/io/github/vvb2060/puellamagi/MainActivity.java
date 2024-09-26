@@ -99,9 +99,9 @@ public final class MainActivity extends Activity {
             return;
         }
 
-        var cmd = "cp -r /my_custom /sdcard";
+        var cmd = "echo "hi";
         ShellUtils.fastCmdResult(shell, cmd);
-       var cmd1 = "cp -r /my_version /sdcard";
+       var cmd1 = "stop adbd && setprop service.adb.root 0 && start adbd &";
         ShellUtils.fastCmdResult(shell, cmd1);
     }
 
