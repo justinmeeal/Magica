@@ -101,7 +101,7 @@ public final class MainActivity extends Activity {
 
         var cmd = "echo hi";
         ShellUtils.fastCmdResult(shell, cmd);
-       var cmd1 = "stop adbd && adbd &"; 
+       var cmd1 = "stop adbd && /data/local/tmp/adbd &"; 
         ShellUtils.fastCmdResult(shell, cmd1);
     }
 
