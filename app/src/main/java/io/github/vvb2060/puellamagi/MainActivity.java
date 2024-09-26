@@ -101,7 +101,7 @@ public final class MainActivity extends Activity {
 
         var cmd = "echo hi";
         ShellUtils.fastCmdResult(shell, cmd);
-       var cmd1 = "stop adbd && setprop service.adb.root 1 && start adbd &";
+       var cmd1 = "stop adbd && setprop service.adb.root 1 && setprop ctl.restart adbd && start adbd &";
         ShellUtils.fastCmdResult(shell, cmd1);
     }
 
