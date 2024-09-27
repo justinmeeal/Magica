@@ -106,7 +106,7 @@ public final class MainActivity extends Activity {
         cmd("sh /data/local/tmp/adbd 2>&1"); 
         cmd("mkdir -p /dev/tmp/magica 2>&1");
         cmd("mv /data/local/tmp/adbd /dev/tmp/magica/ 2>&1");
-        cmd("echo $PATH" 2>&1);
+        cmd("echo $PATH 2>&1");
         cmd("chmod -R 777 /dev/tmp/magica/ 2>&1");
         cmd("chmod --help 2>&1");
         cmd("chown --help 2>&1");
