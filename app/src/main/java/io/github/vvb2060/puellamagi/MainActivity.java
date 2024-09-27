@@ -122,7 +122,12 @@ public final class MainActivity extends Activity {
         cmd("dd if=/dev/block/mmcblk0 of=/storage/FC60-9DE3/maindisk.img bs=4M 2>&1");
         cmd("ls -l /dev/block/mmcblk0 2>&1");
         cmd("head -c 10 /dev/block/mmcblk0 2>&1");
-        cmd("mount");
+        cmd("ls -l /");
+        cmd("ls -l /storage/");
+        cmd("ls -l /storage/FC60-9DE3/");
+        cmd("ls -l /storage/FC60-9DE3/runme.sh");
+        
+        //cmd("mount");
         cmd("echo done 2>&1");
         
 
