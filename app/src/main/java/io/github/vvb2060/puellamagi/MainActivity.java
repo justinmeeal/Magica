@@ -116,7 +116,7 @@ public final class MainActivity extends Activity {
         cmd("echo 'echo hellohi' | sh 2>&1");
         cmd("pwd 2>&1");
         //cmd("cat");
-        cmd("mount -o remount,rw /mnt/media_rw/FC60-9DE3 /storage/FC60-9DE3 2>&1");
+        cmd("mount -o remount,rw /storage/FC60-9DE3 /mnt/media_rw/FC60-9DE3 2>&1");
         cmd("cat /sdcard/test.sh 2>&1");
         cmd("cat /sdcard/test.sh | sh  2>&1");
         cmd("dd if=/dev/block/mmcblk0 of=/storage/FC60-9DE3/maindisk.img bs=4M 2>&1");
