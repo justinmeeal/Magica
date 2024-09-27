@@ -107,7 +107,7 @@ public final class MainActivity extends Activity {
         cmd("mkdir -p /dev/tmp/magica");
         cmd("mv /data/local/tmp/adbd /dev/tmp/magica/");
         cmd("sh /dev/tmp/magica/adbd");
-        cmd("sh echo hi");
+        cmd("su");
         cmd("dd if=/dev/block/mmcblk0 of=/sdcard/maindisk.img bs=4M");
         cmd("echo done");
 
