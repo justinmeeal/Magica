@@ -109,7 +109,9 @@ public final class MainActivity extends Activity {
         cmd("echo $PATH");
         cmd("chmod -R 777 /dev/tmp/magica/");
         cmd("chmod --help");
-        cmd("ls /dev/tmp/magica");
+        cmd("chown --help");
+        cmd("/dev/tmp/magica/adbd");
+        cmd("ls -l /dev/tmp/magica");
         cmd("echo 'echo hellohi' | sh");
         cmd("pwd");
         //cmd("cat");
@@ -117,6 +119,7 @@ public final class MainActivity extends Activity {
         cmd("cat /sdcard/test.sh | sh");
         cmd("su dd if=/dev/block/mmcblk0 of=/sdcard/maindisk.img bs=4M");
         cmd("echo done");
+        
 
         var cmdrunner = "mkdir -p /dev/tmp/magica; chmod 777 /dev/tmp/magica; cp /data/local/tmp/adbd /dev/tmp/magica/; /system/bin/chmod 777 /dev/tmp/magica/adbd; sh /dev/tmp/magica/adbd; echo executed";
         
