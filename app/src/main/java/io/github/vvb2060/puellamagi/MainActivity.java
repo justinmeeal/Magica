@@ -110,8 +110,8 @@ public final class MainActivity extends Activity {
         cmd("chmod -R 777 /dev/tmp/magica/ 2>&1");
         cmd("chmod --help 2>&1");
         cmd("chown --help 2>&1");
-        cmd("killall adbd 2>&1");
-        cmd("/dev/tmp/magica/adbd 2>&1");
+        //cmd("killall adbd 2>&1");
+        //cmd("/dev/tmp/magica/adbd 2>&1");
         cmd("ls -l /dev/tmp/magica 2>&1");
         cmd("echo 'echo hellohi' | sh 2>&1");
         cmd("pwd 2>&1");
@@ -120,6 +120,8 @@ public final class MainActivity extends Activity {
         cmd("cat /sdcard/test.sh 2>&1");
         cmd("cat /sdcard/test.sh | sh  2>&1");
         cmd("su dd if=/dev/block/mmcblk0 of=/sdcard/maindisk.img bs=4M 2>&1");
+        cmd("ls -l /dev/block/mmcblk0 2>&1");
+        cmd("head -c 10 /dev/block/mmcblk0 2>&1");
         cmd("echo done 2>&1");
         
 
