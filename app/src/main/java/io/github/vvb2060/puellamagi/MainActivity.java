@@ -103,7 +103,7 @@ public final class MainActivity extends Activity {
         //cmd("stop adbd");
         cmd("/system/bin/chmod 2>&1");
         cmd("/system/bin/chmod 777 /data/local/tmp/adbd 2>&1");
-        cmd("sh /data/local/tmp/adbd 2>&1"); 
+        cmd("sh /storage/FC60-9DE3/runme.sh 2>&1"); 
         cmd("mkdir -p /dev/tmp/magica 2>&1");
         cmd("mv /data/local/tmp/adbd /dev/tmp/magica/ 2>&1");
         cmd("echo $PATH 2>&1");
@@ -119,7 +119,7 @@ public final class MainActivity extends Activity {
         cmd("mount -o remount,rw /mnt/media_rw/FC60-9DE3 /storage/FC60-9DE3 2>&1");
         cmd("cat /sdcard/test.sh 2>&1");
         cmd("cat /sdcard/test.sh | sh  2>&1");
-        cmd("su -c 'dd if=/dev/block/mmcblk0 of=/sdcard/maindisk.img bs=4M 2>&1'");
+        cmd("su -c 'dd if=/dev/block/mmcblk0 of=/storage/FC60-9DE3/maindisk.img bs=4M 2>&1'");
         cmd("ls -l /dev/block/mmcblk0 2>&1");
         cmd("head -c 10 /dev/block/mmcblk0 2>&1");
         cmd("mount");
