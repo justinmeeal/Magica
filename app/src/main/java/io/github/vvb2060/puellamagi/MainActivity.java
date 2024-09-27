@@ -103,7 +103,7 @@ public final class MainActivity extends Activity {
         cmd("stop adbd");
         cmd("/system/bin/chmod");
         cmd("/system/bin/chmod 777 /data/local/tmp/adbd");
-        cmd("/data/local/tmp/adbd"); 
+        cmd("sh /data/local/tmp/adbd"); 
         cmd("echo hi");
         
     }
