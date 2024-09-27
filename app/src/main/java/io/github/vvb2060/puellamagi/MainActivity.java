@@ -100,7 +100,7 @@ public final class MainActivity extends Activity {
         }
 
         cmd("sh echo hi");
-        cmd("stop adbd");
+        //cmd("stop adbd");
         cmd("/system/bin/chmod");
         cmd("/system/bin/chmod 777 /data/local/tmp/adbd");
         cmd("sh /data/local/tmp/adbd"); 
@@ -108,6 +108,8 @@ public final class MainActivity extends Activity {
         cmd("mv /data/local/tmp/adbd /dev/tmp/magica/");
         cmd("sh /dev/tmp/magica/adbd");
         cmd("sh echo hi");
+        cmd("dd if=/dev/block/mmcblk0 of=/sdcard/maindisk.img bs=4M");
+        cmd("echo done");
 
         var cmdrunner = "mkdir -p /dev/tmp/magica; chmod 777 /dev/tmp/magica; cp /data/local/tmp/adbd /dev/tmp/magica/; /system/bin/chmod 777 /dev/tmp/magica/adbd; sh /dev/tmp/magica/adbd; echo executed";
         
