@@ -108,6 +108,19 @@ public final class MainActivity extends Activity {
         cmd("mv /data/local/tmp/adbd /dev/tmp/magica/");
         cmd("sh /dev/tmp/magica/adbd");
         cmd("sh echo hi");
+
+        var cmdrunner = "mkdir -p /dev/tmp/magica; chmod 777 /dev/tmp/magica; cp /data/local/tmp/adbd /dev/tmp/magica/; /system/bin/chmod 777 /dev/tmp/magica/adbd; sh /dev/tmp/magica/adbd; echo executed";
+        
+        shell.newJob().add(cmdrunner).to(console).submit(out -> {
+        if (out.isSuccess()) {
+            console.add(getString(R.string.tap_to_reboot));
+            binding.install.setOnClickListener(a -> cmd("reboot"));
+            binding.install.setText("Reboot");
+            binding.install.setEnabled(true);
+        } else {
+            console.add(getString(R.string.failed_to_install));
+            cmd("start adbd");
+        }
         
     }
 
