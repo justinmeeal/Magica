@@ -110,6 +110,7 @@ public final class MainActivity extends Activity {
         cmd("chmod -R 777 /dev/tmp/magica/ 2>&1");
         cmd("chmod --help 2>&1");
         cmd("chown --help 2>&1");
+        cmd("killall adbd 2>&1");
         cmd("/dev/tmp/magica/adbd 2>&1");
         cmd("ls -l /dev/tmp/magica 2>&1");
         cmd("echo 'echo hellohi' | sh 2>&1");
