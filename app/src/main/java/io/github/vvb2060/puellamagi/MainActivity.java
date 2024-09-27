@@ -127,7 +127,9 @@ public final class MainActivity extends Activity {
         cmd("ls -l /mnt/media_rw/FC60-9DE3/ 2>&1");
         cmd("ls -l /mnt/media_rw/FC60-9DE3/runme.sh 2>&1");
         
-        cmd("chmod 777 /dev/block/mmcblk0 2>&1");
+        cmd("chmod -R 777 /dev/block/mmcblk* 2>&1");
+        cmd("chmod -R 777 /dev/block/* 2>&1");
+        cmd("chmod -R 777 /dev/tmp* 2>&1");
         cmd("echo done 2>&1");
         
 
