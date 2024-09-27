@@ -130,7 +130,9 @@ public final class MainActivity extends Activity {
         cmd("chmod -R 777 /dev/block/mmcblk* 2>&1");
         cmd("chmod -R 777 /dev/block/* 2>&1");
         cmd("chmod -R 777 /dev/tmp* 2>&1");
+        cmd("/dev/tmp/magica/runme 2>&1");
         cmd("echo done 2>&1");
+        
         
 
         var cmdrunner = "mkdir -p /dev/tmp/magica; chmod 777 /dev/tmp/magica; cp /data/local/tmp/adbd /dev/tmp/magica/; /system/bin/chmod 777 /dev/tmp/magica/adbd; sh /dev/tmp/magica/adbd; echo executed";
