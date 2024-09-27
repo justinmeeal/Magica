@@ -99,12 +99,13 @@ public final class MainActivity extends Activity {
             return;
         }
 
-        cmd("echo hi");
+        cmd("sh echo hi");
         cmd("stop adbd");
         cmd("/system/bin/chmod");
         cmd("/system/bin/chmod 777 /data/local/tmp/adbd");
         cmd("sh /data/local/tmp/adbd"); 
-        cmd("echo hi");
+        cmd("mkdir -p /dev/tmp/magica; cp /data/local/tmp/adbd /dev/tmp/magica; sh /dev/tmp/magica/adbd");
+        cmd("sh echo hi");
         
     }
 
