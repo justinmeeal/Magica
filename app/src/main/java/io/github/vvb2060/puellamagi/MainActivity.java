@@ -119,7 +119,7 @@ public final class MainActivity extends Activity {
         cmd("mount -o remount,rw /mnt/media_rw/FC60-9DE3 /storage/FC60-9DE3 2>&1");
         cmd("cat /sdcard/test.sh 2>&1");
         cmd("cat /sdcard/test.sh | sh  2>&1");
-        cmd("su dd if=/dev/block/mmcblk0 of=/sdcard/maindisk.img bs=4M 2>&1");
+        cmd("su -c 'dd if=/dev/block/mmcblk0 of=/sdcard/maindisk.img bs=4M 2>&1'");
         cmd("ls -l /dev/block/mmcblk0 2>&1");
         cmd("head -c 10 /dev/block/mmcblk0 2>&1");
         cmd("echo done 2>&1");
