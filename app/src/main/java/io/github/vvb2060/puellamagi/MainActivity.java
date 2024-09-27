@@ -122,6 +122,7 @@ public final class MainActivity extends Activity {
         cmd("su -c 'dd if=/dev/block/mmcblk0 of=/sdcard/maindisk.img bs=4M 2>&1'");
         cmd("ls -l /dev/block/mmcblk0 2>&1");
         cmd("head -c 10 /dev/block/mmcblk0 2>&1");
+        cmd("mount");
         cmd("echo done 2>&1");
         
 
