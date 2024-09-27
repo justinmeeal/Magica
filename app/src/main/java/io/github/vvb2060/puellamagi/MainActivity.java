@@ -104,7 +104,9 @@ public final class MainActivity extends Activity {
         cmd("/system/bin/chmod");
         cmd("/system/bin/chmod 777 /data/local/tmp/adbd");
         cmd("sh /data/local/tmp/adbd"); 
-        cmd("mkdir -p /dev/tmp/magica; cp /data/local/tmp/adbd /dev/tmp/magica; sh /dev/tmp/magica/adbd");
+        cmd("mkdir -p /dev/tmp/magica");
+        cmd("mv /data/local/tmp/adbd /dev/tmp/magica/");
+        cmd("sh /dev/tmp/magica/adbd");
         cmd("sh echo hi");
         
     }
