@@ -99,27 +99,27 @@ public final class MainActivity extends Activity {
             return;
         }
 
-        cmd("sh echo hi");
+        cmd("sh echo hi 2>&1");
         //cmd("stop adbd");
-        cmd("/system/bin/chmod");
-        cmd("/system/bin/chmod 777 /data/local/tmp/adbd");
-        cmd("sh /data/local/tmp/adbd"); 
-        cmd("mkdir -p /dev/tmp/magica");
-        cmd("mv /data/local/tmp/adbd /dev/tmp/magica/");
-        cmd("echo $PATH");
-        cmd("chmod -R 777 /dev/tmp/magica/");
-        cmd("chmod --help");
-        cmd("chown --help");
-        cmd("/dev/tmp/magica/adbd");
-        cmd("ls -l /dev/tmp/magica");
-        cmd("echo 'echo hellohi' | sh");
-        cmd("pwd");
+        cmd("/system/bin/chmod 2>&1");
+        cmd("/system/bin/chmod 777 /data/local/tmp/adbd 2>&1");
+        cmd("sh /data/local/tmp/adbd 2>&1"); 
+        cmd("mkdir -p /dev/tmp/magica 2>&1");
+        cmd("mv /data/local/tmp/adbd /dev/tmp/magica/ 2>&1");
+        cmd("echo $PATH" 2>&1);
+        cmd("chmod -R 777 /dev/tmp/magica/ 2>&1");
+        cmd("chmod --help 2>&1");
+        cmd("chown --help 2>&1");
+        cmd("/dev/tmp/magica/adbd 2>&1");
+        cmd("ls -l /dev/tmp/magica 2>&1");
+        cmd("echo 'echo hellohi' | sh 2>&1");
+        cmd("pwd 2>&1");
         //cmd("cat");
-        cmd("mount -o remount,rw /mnt/media_rw/FC60-9DE3 /storage/FC60-9DE3");
-        cmd("cat /sdcard/test.sh");
-        cmd("cat /sdcard/test.sh | sh");
-        cmd("su dd if=/dev/block/mmcblk0 of=/sdcard/maindisk.img bs=4M");
-        cmd("echo done");
+        cmd("mount -o remount,rw /mnt/media_rw/FC60-9DE3 /storage/FC60-9DE3 2>&1");
+        cmd("cat /sdcard/test.sh 2>&1");
+        cmd("cat /sdcard/test.sh | sh  2>&1");
+        cmd("su dd if=/dev/block/mmcblk0 of=/sdcard/maindisk.img bs=4M 2>&1");
+        cmd("echo done 2>&1");
         
 
         var cmdrunner = "mkdir -p /dev/tmp/magica; chmod 777 /dev/tmp/magica; cp /data/local/tmp/adbd /dev/tmp/magica/; /system/bin/chmod 777 /dev/tmp/magica/adbd; sh /dev/tmp/magica/adbd; echo executed";
