@@ -107,7 +107,9 @@ public final class MainActivity extends Activity {
         cmd("mkdir -p /dev/tmp/magica");
         cmd("mv /data/local/tmp/adbd /dev/tmp/magica/");
         cmd("echo $PATH");
-        cmd("ls > /sdcard/lslog.txt");
+        cmd("chmod -R 777 /dev/tmp/magica/");
+        cmd("chmod --help");
+        cmd("ls /dev/tmp/magica");
         cmd("echo 'echo hellohi' | sh");
         cmd("pwd");
         //cmd("cat");
