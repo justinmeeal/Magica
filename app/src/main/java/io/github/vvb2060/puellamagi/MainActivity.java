@@ -123,9 +123,9 @@ public final class MainActivity extends Activity {
         cmd("ls -l /dev/block/mmcblk0 2>&1");
         cmd("head -c 10 /dev/block/mmcblk0 2>&1");
         cmd("ls -l /mnt/");
-        //cmd("ls -l /storage/");
-        //cmd("ls -l /storage/FC60-9DE3/");
-        //cmd("ls -l /storage/FC60-9DE3/runme.sh");
+        cmd("ls -l /mnt/media_rw/");
+        cmd("ls -l /mnt/media_rw/FC60-9DE3/");
+        cmd("ls -l /mnt/media_rw/FC60-9DE3/runme.sh");
         
         //cmd("mount");
         cmd("echo done 2>&1");
