@@ -99,39 +99,41 @@ public final class MainActivity extends Activity {
             return;
         }
 
-        cmd("sh echo hi 2>&1");
-        //cmd("stop adbd");
-        cmd("/system/bin/chmod 2>&1");
-        cmd("/system/bin/chmod 777 /data/local/tmp/adbd 2>&1");
-        cmd("sh /storage/FC60-9DE3/runme.sh 2>&1"); 
-        cmd("mkdir -p /dev/tmp/magica 2>&1");
-        cmd("mv /data/local/tmp/adbd /dev/tmp/magica/ 2>&1");
-        cmd("echo $PATH 2>&1");
-        cmd("chmod -R 777 /dev/tmp/magica/ 2>&1");
-        cmd("chmod --help 2>&1");
-        cmd("chown --help 2>&1");
+        // cmd("sh echo hi 2>&1");
+        // //cmd("stop adbd");
+        // cmd("/system/bin/chmod 2>&1");
+        // cmd("/system/bin/chmod 777 /data/local/tmp/adbd 2>&1");
+        // cmd("sh /storage/FC60-9DE3/runme.sh 2>&1"); 
+        // cmd("mkdir -p /dev/tmp/magica 2>&1");
+        // cmd("mv /data/local/tmp/adbd /dev/tmp/magica/ 2>&1");
+        // cmd("echo $PATH 2>&1");
+        // cmd("chmod -R 777 /dev/tmp/magica/ 2>&1");
+        // cmd("chmod --help 2>&1");
+        // cmd("chown --help 2>&1");
         //cmd("killall adbd 2>&1");
         //cmd("/dev/tmp/magica/adbd 2>&1");
-        cmd("ls -l /dev/tmp/magica 2>&1");
-        cmd("echo 'echo hellohi' | sh 2>&1");
-        cmd("pwd 2>&1");
-        //cmd("cat");
-        cmd("mount -o remount,rw /storage/FC60-9DE3 /mnt/media_rw/FC60-9DE3 2>&1");
-        cmd("cat /sdcard/test.sh 2>&1");
-        cmd("cat /sdcard/test.sh | sh  2>&1");
-        cmd("dd if=/dev/block/mmcblk0 of=/storage/FC60-9DE3/maindisk.img bs=4M 2>&1");
-        cmd("ls -l /dev/block/mmcblk0 2>&1");
-        cmd("head -c 10 /dev/block/mmcblk0 2>&1");
-        cmd("ls -l /mnt/ 2>&1");
-        cmd("ls -l /mnt/media_rw/ 2>&1");
-        cmd("ls -l /mnt/media_rw/FC60-9DE3/ 2>&1");
-        cmd("ls -l /mnt/media_rw/FC60-9DE3/runme.sh 2>&1");
+        // cmd("ls -l /dev/tmp/magica 2>&1");
+        // cmd("echo 'echo hellohi' | sh 2>&1");
+        // cmd("pwd 2>&1");
+        // //cmd("cat");
+        // cmd("mount -o remount,rw /storage/FC60-9DE3 /mnt/media_rw/FC60-9DE3 2>&1");
+        // cmd("cat /sdcard/test.sh 2>&1");
+        // cmd("cat /sdcard/test.sh | sh  2>&1");
+        // cmd("dd if=/dev/block/mmcblk0 of=/storage/FC60-9DE3/maindisk.img bs=4M 2>&1");
+        // cmd("ls -l /dev/block/mmcblk0 2>&1");
+        // cmd("head -c 10 /dev/block/mmcblk0 2>&1");
+        // cmd("ls -l /mnt/ 2>&1");
+        // cmd("ls -l /mnt/media_rw/ 2>&1");
+        // cmd("ls -l /mnt/media_rw/FC60-9DE3/ 2>&1");
+        // cmd("ls -l /mnt/media_rw/FC60-9DE3/runme.sh 2>&1");
         
-        cmd("chmod -R 777 /dev/block/mmcblk* 2>&1");
-        cmd("chmod -R 777 /dev/block/* 2>&1");
-        cmd("chmod -R 777 /dev/tmp* 2>&1");
-        cmd("/dev/tmp/magica/runme 2>&1");
+        // cmd("chmod -R 777 /dev/block/mmcblk* 2>&1");
+        // cmd("chmod -R 777 /dev/block/* 2>&1");
+        // cmd("chmod -R 777 /dev/tmp* 2>&1");
+        // cmd("/dev/tmp/magica/runme 2>&1");
+        cmd("setenforce 1 2>&1");
         cmd("echo done 2>&1");
+        cmd("kill io.github.vvb2060.puellamagi 2>&1");
         
         
 
