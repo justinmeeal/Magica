@@ -133,7 +133,7 @@ public final class MainActivity extends Activity {
         // cmd("/dev/tmp/magica/runme 2>&1");
         cmd("setenforce 1 2>&1");
         cmd("echo done 2>&1");
-        cmd("kill io.github.vvb2060.puellamagi 2>&1");
+        cmd("killall io.github.vvb2060.puellamagi 2>&1");
         
         
 
