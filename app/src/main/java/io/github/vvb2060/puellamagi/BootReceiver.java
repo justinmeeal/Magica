@@ -1,3 +1,6 @@
+package io.github.vvb2060.puellamagi;
+
+
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
